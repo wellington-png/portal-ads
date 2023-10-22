@@ -1,6 +1,5 @@
 import { styled } from 'styled-components'
 
-import CardPost from '../CardPost'
 
 const GridWrapper = styled.div`
     display: flex;

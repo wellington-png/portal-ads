@@ -24,7 +24,7 @@ const Main = styled.main`
   min-height: 100vh;
 `
 
-const deafaltProps = {
+const defaultProps = {
   title: "Bem vindo ao blog <span style={{ color: '#FF6978' }}>ADS</span>!",
   subtitle: "Lorem ipsum dolor sit amet consectetur",
   image: 'https://www.ifnmg.edu.br/arquivos/Almenara/Logos/LADS.png'
@@ -32,16 +32,17 @@ const deafaltProps = {
 }
 
 
-export default function MyApp({ children = <Home />, title = deafaltProps.title, subtitle = deafaltProps.subtitle, image = deafaltProps.image }) {
+export default function MyApp({ children = <Home />, title = defaultProps.title, subtitle = defaultProps.subtitle, image = defaultProps.image }) {
 
-  return <Provider store={store}>
-    <Main>
-      <GlobalStyle />
-      <Header title={title} subtitle={subtitle} image={image} />
-      <Container>
-        {children}
-      </Container>
-      <Footer />
-    </Main>
-  </Provider>
+  return (
+    <Provider store={store}>
+      <Main>
+        <GlobalStyle />
+        <Header title={title} subtitle={subtitle} image={image} />
+        <Container>
+          {children}
+        </Container>
+        <Footer />
+      </Main>
+    </Provider>)
 }
