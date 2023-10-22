@@ -62,6 +62,13 @@ const PostSubtitle = styled.h4`
     color: #2D1441;
 `
 
+const PostLink = styled.a`
+    font-size: 1rem;
+    font-weight: 400;
+    color: #2D1441;
+`
+
+
 
 
 export default function ListPost({ posts }) {
@@ -81,6 +88,7 @@ export default function ListPost({ posts }) {
                         <PostTitle>{post.title}</PostTitle>
                         <PostSubtitle>{post.subtitle}</PostSubtitle>
                     </div>
+                    <PostLink href={post.link}>Ver mais</PostLink>
                 </PostWrapper>
             ))}                
         </ListPostWrapper>

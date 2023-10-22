@@ -1,5 +1,5 @@
 import { styled } from 'styled-components'
-
+import Link from 'next/link'
 
 const NavBarContainer = styled.div`
     display: flex;
@@ -23,16 +23,20 @@ const NavBarLinks = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 1rem;
+        &:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    }
 `
 
 const NavBarLink = styled.a`
-    color: #fff;
-    text-decoration: none;
-    margin-left: 1rem;
-    &:hover {
-        color: #fff;
-        text-decoration: underline;
-    }
+
 `
 
 export default function NavBar() {
@@ -42,13 +46,13 @@ export default function NavBar() {
                 <h1>Blog ADS</h1>
             </NavBarTitle>
             <NavBarLinks>
-                <NavBarLink href="/">Home</NavBarLink>
-                <NavBarLink href="/post-interno">Post ADS</NavBarLink>
-                <NavBarLink href="/post-externo">Post externos</NavBarLink>
-                <NavBarLink href="/contact">Contato</NavBarLink>
-                <NavBarLink href="/faculty">Corpo docente</NavBarLink>
-                <NavBarLink href="/student-representative">Representante</NavBarLink>
-                <NavBarLink href="/list-class">Turmas</NavBarLink>
+                <Link href="/">Home</Link>
+                <Link href="/post-interno">Post ADS</Link>
+                <Link href="/post-externo">Post externos</Link>
+                <Link href="/contact">Contato</Link>
+                <Link href="/faculty">Corpo docente</Link>
+                <Link href="/student-representative">Representante</Link>
+                <Link href="/list-class">Turmas</Link>
             </NavBarLinks>
         </NavBarContainer>
     )
