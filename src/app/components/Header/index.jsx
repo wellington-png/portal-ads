@@ -39,21 +39,22 @@ const HeaderBannerSubtitle = styled.h2`
 const HeaderBannerImage = styled.img`
     width: 20rem;
     height: 20rem;
-    border-radius: 50%;
+    border-radius: 2%;
 `
 
 
 
-export default function Header() {
+
+export default function Header({ title, subtitle, image }) {
     return (
         <HeaderContainer>
             <NavBar />
             <HeaderBanner>
                 <HeaderBannerText>
-                    <HeaderBannerTitle>Bem vindo ao blog <span style={{ color: '#FF6978' }}>ADS</span></HeaderBannerTitle>
-                    <HeaderBannerSubtitle>Lorem ipsum dolor sit amet consectetur</HeaderBannerSubtitle>
+                    <HeaderBannerTitle dangerouslySetInnerHTML={{__html: title}} />
+                    <HeaderBannerSubtitle>{ subtitle }</HeaderBannerSubtitle>
                 </HeaderBannerText>
-                <HeaderBannerImage src="https://avatars.githubusercontent.com/u/59374678?v=4" alt="Sara" />
+                <HeaderBannerImage src={ image } alt="logo" />
             </HeaderBanner>
         </HeaderContainer>
     )

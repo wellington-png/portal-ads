@@ -1,7 +1,9 @@
 "use client"
+import { useState, useEffect } from 'react'
 import { styled } from 'styled-components'
 import ListPost  from '../components/ListPost'
 import Base from '../page'
+import api, { getNews } from '../services/api'
 
 const PostInternoWrapper = styled.div`
     display: flex;
@@ -9,72 +11,32 @@ const PostInternoWrapper = styled.div`
     padding: 0 2rem 2rem;
 `
 
-const posts = [
-    {
-        title: 'Post 1',
-        subtitle: 'Subtitle 1',
-        description: 'Description 1',
-        link: 'https://google.com',
-        tags: ['tag1', 'tag2', 'tag3']
-    },
-    {
-        title: 'Post 2',
-        subtitle: 'Subtitle 2',
-        description: 'Description 2',
-        link: 'https://google.com',
-        tags: ['tag1', 'tag2', 'tag3']
-    },
-    {
-        title: 'Post 3',
-        subtitle: 'Subtitle 3',
-        description: 'Description 3',
-        link: 'https://google.com',
-        tags: ['tag1', 'tag2', 'tag3']
-    },
-    {
-        title: 'Post 4',
-        subtitle: 'Subtitle 4',
-        description: 'Description 4',
-        link: 'https://google.com',
-        tags: ['tag1', 'tag2', 'tag3']
-    },
-    {
-        title: 'Post 5',
-        subtitle: 'Subtitle 5',
-        description: 'Description 5',
-        link: 'https://google.com',
-        tags: ['tag1', 'tag2', 'tag3']
-    },
-    {
-        title: 'Post 6',
-        subtitle: 'Subtitle 6',
-        description: 'Description 6',
-        link: 'https://google.com',
-        tags: ['tag1', 'tag2', 'tag3']
-    },
-    {
-        title: 'Post 7',
-        subtitle: 'Subtitle 7',
-        description: 'Description 7',
-        link: 'https://google.com',
-        tags: ['tag1', 'tag2', 'tag3']
-    },
-    {
-        title: 'Post 8',
-        subtitle: 'Subtitle 8',
-        description: 'Description 8',
-        link: 'https://google.com',
-        tags: ['tag1', 'tag2', 'tag3']
-    }
-]
 
 
 export default function PostInterno() {
+    const [posts1, setPosts] = useState([])
+    useEffect(() => {
+            async function getPosts() {
+                const response = await api.get('')
+                const articles = response.data.articles.filter((article) => article.urlToImage)
+
+                setPosts(articles.map((post) => ({
+                    title: post.title,
+                    subtitle: post.author,
+                    description: post.description,
+                    link: post.url,
+                    tags: [],
+                    image: post.urlToImage
+                })))
+            }
+            getPosts()
+    }, [])
+
     return (
         <Base>
-            <h1>Post Interno</h1>
+            <h1>Post Externo</h1>
             <PostInternoWrapper>
-                <ListPost posts={posts} />
+                <ListPost posts={posts1} />
             </PostInternoWrapper>
         </Base>
     )

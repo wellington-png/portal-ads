@@ -68,11 +68,11 @@ const CardItemTagText = styled.p`
 export default function CardPost({ title, subtitle, description, link, tags, image }) {
     return (
         <CardItem>
-            <CardItemimage src="https://picsum.photos/200/300" alt={title} />
+            <CardItemimage src={image} alt={title} />
             <CardItemTitle>{title}</CardItemTitle>
             <CardItemSubtitle>{subtitle}</CardItemSubtitle>
             <CardItemDescription>{description}</CardItemDescription>
-            <CardItemLink href={link}>{link}</CardItemLink>
+            <CardItemLink href={link}>Acessar</CardItemLink>
             <CardItemTags>
                 {tags.map((tag, index) => (
                     <CardItemTag key={index}>

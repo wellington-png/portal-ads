@@ -1,17 +1,8 @@
-"use client"
-import { styled } from 'styled-components'
+import { createSlice } from '@reduxjs/toolkit';
 import { v4 as uuid } from 'uuid'
 
-import ListPost from '../components/ListPost'
-import Base from '../page'
 
-const PostInternoWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    padding: 0 2rem 2rem;
-`
-
-const posts = [
+const initialState = [
     {
         id: uuid(),
         title: 'Post 1',
@@ -86,16 +77,13 @@ const posts = [
         link: 'https://google.com',
         tags: ['tag1', 'tag2', 'tag3']
     }
-]
+];
 
-export default function PostInterno() {
+const postsSlices = createSlice(
+    {
+        name: 'posts',
+        initialState,
+    }
+)
 
-    return (
-        <Base>
-            <h1>Post Interno</h1>
-            <PostInternoWrapper>
-                <ListPost posts={posts} />
-            </PostInternoWrapper>
-        </Base>
-    )
-}
+export default postsSlices.reducer

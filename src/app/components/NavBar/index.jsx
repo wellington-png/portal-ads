@@ -43,8 +43,12 @@ export default function NavBar() {
             </NavBarTitle>
             <NavBarLinks>
                 <NavBarLink href="/">Home</NavBarLink>
-                <NavBarLink href="/about">About</NavBarLink>
-                <NavBarLink href="/contact">Contact</NavBarLink>
+                <NavBarLink href="/post-interno">Post ADS</NavBarLink>
+                <NavBarLink href="/post-externo">Post externos</NavBarLink>
+                <NavBarLink href="/contact">Contato</NavBarLink>
+                <NavBarLink href="/faculty">Corpo docente</NavBarLink>
+                <NavBarLink href="/student-representative">Representante</NavBarLink>
+                <NavBarLink href="/list-class">Turmas</NavBarLink>
             </NavBarLinks>
         </NavBarContainer>
     )

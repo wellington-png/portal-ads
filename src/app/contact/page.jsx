@@ -16,7 +16,7 @@ const FormContainer = styled.div`
     padding: 0 2rem 2rem;
 `
 
-const Form = styled.form`
+const Form = styled.div`
     display: flex;
     flex-direction: column;
     padding: 0 2rem 2rem;
@@ -53,21 +53,19 @@ const Form = styled.form`
 `
 
 
-
-
 export default function Contact() {
     return (
-        <Base>
+        <Base title="Pagina de contatos" >
             <ContactWrapper>
                 <FormContainer>
                     <Form>
-                        <label for="name">Nome</label>
+                        <label >Nome</label>
                         <input type="text" id="name" name="name" placeholder="Seu nome" />
 
-                        <label for="email">Email</label>
+                        <label >Email</label>
                         <input type="email" id="email" name="email" placeholder="Seu email" />
 
-                        <label for="message">Mensagem</label>
+                        <label >Mensagem</label>
                         <textarea id="message" name="message" placeholder="Sua mensagem" />
 
                         <input type="submit" value="Enviar" />

@@ -58,25 +58,25 @@ const StudentRepresentativeListItem = styled.li`
 
 export default function StudentRepresentative() {
     return (
-        <Base>
+        <Base title="Representante do curso">
             <StudentRepresentativeWrapper>
-                <StudentRepresentativeImage src="https://avatars.githubusercontent.com/u/59374678?v=4" alt="Sara" />
+                <StudentRepresentativeImage src="https://www.psicologosberrini.com.br/wp-content/uploads/10-dicas-de-saude-mental-para-mulheres-768x576.jpg" alt="Sara" />
                 <StudentRepresentativeTitle>Representante de classe</StudentRepresentativeTitle>
                 <StudentRepresentativeSubtitle>Nome</StudentRepresentativeSubtitle>
                 <StudentRepresentativeDescription>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, nesciunt.</StudentRepresentativeDescription>
-                <StudentRepresentativeLink href="https://www.instagram.com/saracarolineoliveira/">Instagram</StudentRepresentativeLink>
+                <StudentRepresentativeLink href="https://www.instagram.com/sabrinaccastelo/">Instagram</StudentRepresentativeLink>
 
                 <StudentRepresentativeList>
                     <StudentRepresentativeListItem>
                         <StudentRepresentativeSubtitle>Nome</StudentRepresentativeSubtitle>
                         <StudentRepresentativeDescription>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, nesciunt.</StudentRepresentativeDescription>
-                        <StudentRepresentativeLink href="https://www.instagram.com/saracarolineoliveira/">Instagram</StudentRepresentativeLink>
+                        <StudentRepresentativeLink href="https://www.instagram.com/sabrinaccastelo/">Instagram</StudentRepresentativeLink>
                     </StudentRepresentativeListItem>
 
                     <StudentRepresentativeListItem>
                         <StudentRepresentativeSubtitle>Nome</StudentRepresentativeSubtitle>
                         <StudentRepresentativeDescription>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, nesciunt.</StudentRepresentativeDescription>
-                        <StudentRepresentativeLink href="https://www.instagram.com/saracarolineoliveira/">Instagram</StudentRepresentativeLink>
+                        <StudentRepresentativeLink href="https://www.instagram.com/sabrinaccastelo/">Instagram</StudentRepresentativeLink>
                     </StudentRepresentativeListItem>
 
                     <StudentRepresentativeListItem>

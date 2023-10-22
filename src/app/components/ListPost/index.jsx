@@ -67,13 +67,13 @@ const PostSubtitle = styled.h4`
 export default function ListPost({ posts }) {
     return (
         <ListPostWrapper>
-            {posts.map(post => (
-                <PostWrapper key={post.id}>
+            {posts.map((post, index) => (
+                <PostWrapper key={index}>
                     <PostImageWrapper>
-                        <PostImage src="https://avatars.githubusercontent.com/u/59374678?v=4" alt={post.title} />
+                        <PostImage src={post.image} alt={post.title} />
                         <PostTags>
-                            {post.tags.map(tag => (
-                                <PostTag key={tag.id}>{tag.name}</PostTag>
+                            {post.tags.map((tag, i) => (
+                                <PostTag key={i}>{tag.name}</PostTag>
                             ))}
                         </PostTags>
                     </PostImageWrapper>
