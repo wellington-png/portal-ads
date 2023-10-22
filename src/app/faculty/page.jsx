@@ -1,5 +1,4 @@
 "use client"
-import React from 'react';
 import { styled } from 'styled-components';
 import GridPost from '../components/GridPost';
 import CardPost from '../components/CardPost';
@@ -35,19 +34,19 @@ const Description = styled.p`
 
 const posts = [
     {
-        title: 'Post 1',
-        subtitle: 'Subtitle 1',
+        title: 'Docente 1',
+        subtitle: 'informação',
         description: 'Description 1',
         link: 'https://google.com',
-        tags: ['tag1', 'tag2', 'tag3'],
+        tags: ['POO', 'WEB', 'ALG'],
         image: 'https://picsum.photos/200/300'
     },
     {
-        title: 'Post 2',
-        subtitle: 'Subtitle 2',
+        title: 'docente 2',
+        subtitle: 'informação',
         description: 'Description 2',
         link: 'https://google.com',
-        tags: ['tag1', 'tag2', 'tag3'],
+        tags: ['POO', 'WEB', 'ALG'],
         image: 'https://picsum.photos/200/300',
 
 
@@ -55,20 +54,20 @@ const posts = [
     {
         image: 'https://picsum.photos/200/300',
 
-        title: 'Post 3',
-        subtitle: 'Subtitle 3',
+        title: 'docente 3',
+        subtitle: 'informação',
         description: 'Description 3',
         link: 'https://google.com',
-        tags: ['tag1', 'tag2', 'tag3']
+        tags: ['POO', 'WEB', 'ALG']
     },
     {
-        title: 'Post 4',
+        title: 'docente 4',
         image: 'https://picsum.photos/200/300',
 
-        subtitle: 'Subtitle 4',
+        subtitle: 'informação',
         description: 'Description 4',
         link: 'https://google.com',
-        tags: ['tag1', 'tag2', 'tag3']
+        tags: ['POO', 'WEB', 'ALG']
     },
 ]
 

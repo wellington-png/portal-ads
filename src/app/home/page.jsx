@@ -1,4 +1,4 @@
-import React from 'react';
+"use client"
 import { useSelector } from 'react-redux';
 import { styled } from 'styled-components';
 import GridPost from '../components/GridPost';
