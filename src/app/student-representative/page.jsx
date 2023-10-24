@@ -12,9 +12,10 @@ const StudentRepresentativeWrapper = styled.div`
 `
 
 const StudentRepresentativeImage = styled.img`
-    width: 100%;
+    width: 450px;
     height: 100%;
     object-fit: cover;
+
 `
 
 const StudentRepresentativeTitle = styled.h1`

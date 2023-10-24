@@ -1,4 +1,5 @@
 import { styled } from 'styled-components'
+import Link from 'next/link'
 
 
 const CardItem = styled.div`
@@ -8,6 +9,12 @@ const CardItem = styled.div`
     padding: 1rem;
     border-radius: 0.5rem;
     background-color: #F4F0F8;
+
+    a{
+        font-size: 1rem;
+        font-weight: 400;
+        color: #2D1441;
+    }
 `
 
 const CardItemimage = styled.img`
@@ -35,9 +42,7 @@ const CardItemDescription = styled.p`
 `
 
 const CardItemLink = styled.a`
-    font-size: 1rem;
-    font-weight: 400;
-    color: #2D1441;
+
 `
 
 const CardItemTags = styled.div`

@@ -25,7 +25,7 @@ const Main = styled.main`
 `
 
 const defaultProps = {
-  title: "Bem vindo ao blog <span style={{ color: '#FF6978' }}>ADS</span>!",
+  title: "Portal",
   subtitle: "Lorem ipsum dolor sit amet consectetur",
   image: 'https://www.ifnmg.edu.br/arquivos/Almenara/Logos/LADS.png'
 

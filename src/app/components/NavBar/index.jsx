@@ -43,7 +43,7 @@ export default function NavBar() {
     return (
         <NavBarContainer>
             <NavBarTitle>
-                <h1>Blog ADS</h1>
+                <h1>Portal</h1>
             </NavBarTitle>
             <NavBarLinks>
                 <Link href="/">Home</Link>
